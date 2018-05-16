@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>crud</title>
+	<meta charset="utf-8"> 	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCROoId8qcDpfgupJ0DFjak4y2SLDZKSMA",
+    authDomain: "formulario-c7fb6.firebaseapp.com",
+    databaseURL: "https://formulario-c7fb6.firebaseio.com",
+    projectId: "formulario-c7fb6",
+    storageBucket: "formulario-c7fb6.appspot.com",
+    messagingSenderId: "981721842163"
+  };
+  firebase.initializeApp(config);
+</script>	
+
+
+	<script src="./js/bd-pesaje.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7">
+				<div class="text-center"><label>LISTA DE PESAJE DE PRODUCTOS</label></div>				
+				
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Peso(Kg)</th>
+						</tr>
+					</thead>
+					<tbody id="tabla-pesaje">
+						
+
+					</tbody>
+				</table>
+			</div>
+			<div class="col-sm-1"><!-- separacion --></div>
+			<div class="col-sm-4">
+				<form id="form-pesaje">
+					<div class="form-group">
+						<label for="nombre">Nombre</label>
+						<input type="text" class="form-control" id="nombre">
+					</div>
+					<div class="form-group">
+						<label for="peso">Peso(kg)</label>
+						<input type="text" class="form-control" id="peso">
+					</div>
+					
+					<input type="submit" class="btn btn-primary" value="Registrar Peso" id="boton-enviar-pesaje"> 
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
